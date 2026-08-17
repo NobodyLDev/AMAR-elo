@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Memória</title>
+    <link rel="shortcut icon" type="image/png" href="../Premium Vector _ Chamomile flat vector icon on a grey background with shadow.jpeg">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="./jogo.css">
+</head>
+<body>
+    <nav class="navbar">
+      <div class="nav-inner">
+        <a class="nav-brand" href="../index.html">nós ✦</a>
+        <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <ul>
+          <li><a href="../index.html">Inicial</a></li>
+          <li><a href="../PedidoNamoro/Pedido.html">Pedido</a></li>
+          <li><a href="../index.html#animated-section-1">Você</a></li>
+          <li><a href="../index.html#animated-section-2">Nós</a></li>
+          <li><a href="../Galeria/galeria.html">Galeria</a></li>
+          <li><a href="../Playlist/playlist.html">Playlist</a></li>
+          <li><a href="../Bilhetes/bilhetes.html">Bilhetes</a></li>
+          <li><a href="./jogo.html">Jogo</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="page">
+      <div class="wrap wrap-narrow">
+        <h1 class="hero-title">Jogo da Memória</h1>
+        <p class="hero-subtitle">ache os pares das nossas fotos</p>
+
+        <div class="game-stats">
+          <div class="stat card"><span id="stat-moves">0</span><small>jogadas</small></div>
+          <div class="stat card"><span id="stat-time">00:00</span><small>tempo</small></div>
+          <div class="stat card"><span id="stat-pairs">0/8</span><small>pares</small></div>
+        </div>
+
+        <div id="game-board" class="game-board"></div>
+
+        <div class="game-actions">
+          <button id="restart-btn" class="btn btn-ghost">Recomeçar</button>
+        </div>
+      </div>
+    </main>
+
+    <!-- Overlay de vitória -->
+    <div id="win-overlay" class="win-overlay hidden">
+      <div class="win-card card">
+        <h2>Parabéns, dupla certa! 🎉</h2>
+        <p id="win-summary"></p>
+        <button id="play-again-btn" class="btn btn-primary">Jogar de novo</button>
+      </div>
+    </div>
+
+    <script src="../assets/js/stars.js"></script>
+    <script src="../assets/js/nav.js"></script>
+    <script src="./jogo.js"></script>
+</body>
+</html>

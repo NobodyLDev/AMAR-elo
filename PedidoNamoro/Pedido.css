@@ -1,0 +1,63 @@
+body { overflow-x: hidden; }
+
+.pedido-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 100px 20px 60px;
+  position: relative;
+}
+
+.pedido-card {
+  text-align: center;
+  max-width: 560px;
+  width: 100%;
+}
+
+.pedido-card h1 {
+  font-size: clamp(2.2rem, 8vw, 3.6rem);
+  color: var(--gold-400);
+  text-shadow: 0 0 40px var(--gold-glow);
+  line-height: 1.15;
+  margin-bottom: 48px;
+}
+
+.button-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  flex-wrap: wrap;
+  min-height: 120px;
+}
+
+.button {
+  padding: 16px 40px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  font-family: var(--font-body);
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.button.yes {
+  background: linear-gradient(135deg, var(--gold-400), var(--gold-500));
+  color: var(--night-900);
+  box-shadow: 0 8px 26px var(--gold-glow);
+}
+.button.yes:hover { transform: translateY(-2px) scale(1.04); }
+
+.button.no {
+  background: transparent;
+  color: var(--rose-400);
+  border: 1.5px solid var(--rose-500);
+  transition: left 0.15s ease, top 0.15s ease, transform 0.2s ease;
+}
+
+@media (max-width: 480px) {
+  .button { padding: 14px 30px; font-size: 1rem; }
+  /* Em telas pequenas, o botão "Não" só foge no toque, não no hover */
+}

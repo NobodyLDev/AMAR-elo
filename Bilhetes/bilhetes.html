@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bilhetes</title>
+    <link rel="shortcut icon" type="image/png" href="../Premium Vector _ Chamomile flat vector icon on a grey background with shadow.jpeg">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="./bilhetes.css">
+</head>
+<body>
+    <nav class="navbar">
+      <div class="nav-inner">
+        <a class="nav-brand" href="../index.html">nós ✦</a>
+        <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <ul>
+          <li><a href="../index.html">Inicial</a></li>
+          <li><a href="../PedidoNamoro/Pedido.html">Pedido</a></li>
+          <li><a href="../index.html#animated-section-1">Você</a></li>
+          <li><a href="../index.html#animated-section-2">Nós</a></li>
+          <li><a href="../Galeria/galeria.html">Galeria</a></li>
+          <li><a href="../Playlist/playlist.html">Playlist</a></li>
+          <li><a href="./bilhetes.html">Bilhetes</a></li>
+          <li><a href="../Jogo/jogo.html">Jogo</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="page">
+      <div class="wrap wrap-narrow">
+        <h1 class="hero-title">Bilhetes</h1>
+        <p class="hero-subtitle">um recadinho de vez em quando faz bem</p>
+
+        <!-- Tela de configuração do Firebase ainda não feita -->
+        <div id="setup-warning" class="card setup-warning hidden">
+          <h3>Falta um passinho ⚙️</h3>
+          <p>Este recurso precisa de uma configuração gratuita do Firebase para os bilhetes aparecerem nos dois celulares. Veja o arquivo <strong>CONFIGURAR-FIREBASE.md</strong> que veio junto com o site — é rapidinho.</p>
+        </div>
+
+        <!-- Escolha de quem está usando o site -->
+        <div id="who-screen" class="card who-screen hidden">
+          <h3>Quem é você? 👀</h3>
+          <p class="who-hint">Só pra sabermos de quem é cada bilhete nesse aparelho.</p>
+          <div class="who-buttons">
+            <button class="btn btn-primary" data-user="Lara">Sou a Lara</button>
+            <button class="btn btn-rose" data-user="Leh">Sou a Leh</button>
+          </div>
+        </div>
+
+        <!-- Mural de bilhetes -->
+        <div id="board-screen" class="hidden">
+          <div class="board-header">
+            <p>logada como <strong id="current-user-label"></strong></p>
+            <button id="switch-user" class="link-btn">trocar</button>
+          </div>
+
+          <form id="note-form" class="note-form card">
+            <textarea id="note-input" maxlength="500" placeholder="Escreva um bilhetinho..." rows="3" required></textarea>
+            <div class="note-form-footer">
+              <span id="char-count" class="char-count">0/500</span>
+              <button type="submit" class="btn btn-primary">Deixar bilhete</button>
+            </div>
+          </form>
+
+          <div id="notes-status" class="notes-status"></div>
+          <div id="notes-board" class="notes-board"></div>
+        </div>
+      </div>
+    </main>
+
+    <script src="../assets/js/stars.js"></script>
+    <script src="../assets/js/nav.js"></script>
+    <script type="module" src="./bilhetes.js"></script>
+</body>
+</html>
